@@ -72,13 +72,21 @@ import { titulo, subtitulo } from './components/Titulo/Titulo' */
 //Dentro de la carpeta, secre otra carpeta llamada "NombreComponente".
 //Dentro de la carpeta "NombreComponente", creamos un archivo llamado "NombreComponente.jsx"y otro llamado "NombreComponente.css".
 
+//Componentes de estado
+//Los componentes de estado son componentes que tienen un estado interno que puede cambiar a lo largo del tiempo. Se utilizan para manejar la lógica y el estado de un componente.
+//Para crear un componente de estado, debemos utilizar el hook useState que nos proporciona React. Este hook nos permite agregar un estado interno a un componente de función.
+//El hook useState recibe un valor inicial y retorna un array con dos elementos: el valor del estado y una función para actualizar el estado.   const [count, setCount] = useState(0)
+
+//Componentes contenedores
+//Los componentes contenedores son componentes que no ejecutan lógica de presentación, sino que contienen a otros componentes y les pasan propiedades.
+//Se comunican con la fuente de datos y pasan los datos a los ccpmponentes hijos
+
 
 
 //Pasando propiedades a un componente-----------------------------------
 //Las propiedades son valores que se pasan a un componente desde el componente padre. Se utilizan para personalizar el comportamiento y la vista de un componente.
 //El nombre de las propiedades debe coincidir con el nombre de las propiedades que se pasan al componente.
 //Para acceder a las propiedades dentro del componente, react mete las propiedades que se le pasan al componente dentro de un objeto llamado "props". Este objeto contiene todas las propiedades que se le pasan al componente. Para acceder a las propiedades, debemos utilizar la notación de punto o destructuring. JS a diferencia de React, no mete las propiedades que se le pasan al componente dentro de un objeto llamado "props".
-
 //Ej:
 
 //En el componente padre:
@@ -122,27 +130,16 @@ let Titulo = (parametro) => {
 
 
 
-//Componentes de estado
-//Los componentes de estado son componentes que tienen un estado interno que puede cambiar a lo largo del tiempo. Se utilizan para manejar la lógica y el estado de un componente.
-//Para crear un componente de estado, debemos utilizar el hook useState que nos proporciona React. Este hook nos permite agregar un estado interno a un componente de función.
-//El hook useState recibe un valor inicial y retorna un array con dos elementos: el valor del estado y una función para actualizar el estado.   const [count, setCount] = useState(0)
 
 
 
-
-//Componentes contenedores
-//Los componentes contenedores son componentes que no ejecutan lógica de presentación, sino que contienen a otros componentes y les pasan propiedades.
-//Se comunican con la fuente de datos y pasan los datos a los ccpmponentes hijos
-
-
-
-//Pasar Componentes como Propiedades
+//Pasar COMPONENTES como Propiedades
 //En React, es posible pasar componentes como propiedades a otros componentes. Esto nos permite reutilizar componentes y crear interfaces de usuario más complejas.
 //Para pasar un componente como propiedad, simplemente lo pasamos como si fuera una propiedad normal.
 //React mete el componente que se pasa como propiedad dentro de un objeto llamado CHILDREN.
 //Para utilizar el componente debemos recibe el objeto children y lo renderizamos en el componente padre.
+//Ej A: (MAS RECOMENDADO)
 
-//Ej A: (MAS RECOMENDADOS)
 //En el componente padre:
 /*  function App() {
     return (
@@ -189,9 +186,22 @@ const Pages = ({ greeting, titulo }) => {
 }    */
 
 
+//--------------------------CLASE DE REPASO-----------------------------------
+
+
 
 //Jerarquias de IMPORTS
 
 //Primero se deben importar las librerias nativas de react
 //Luego se importan los componentes
 //Luego se importan los estilos
+
+
+
+//Instalar bootstrap
+//Para instalar bootstrap en nuestro proyecto, debemos ejecutar el siguiente comando en la terminal: npm install bootstrap
+//Una vez instalado, debemos importar el archivo de estilos de bootstrap en el archivo principal de nuestra aplicación.
+//Para traer el js debemos colocar el script en el archivo index.html
+
+//Si utilizamso bootstrap comun necesitamos corregir detalles de la sintaxis para evitar que salgan warnings en la consola
+//Como por ejemplo cambiar class por className
